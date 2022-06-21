@@ -22,11 +22,14 @@ var user = {
     age: 33,
     location: 'tembleque'
 }
+function getLocation(){
+    return 'Unknown';
+}
 var templateTwo =(
     <div>
         <h1>{user.name}</h1>
         <p>Age: {user.age}</p>
-        <p>Location: {user.location}</p>
+        <p>Location: {getLocation()}</p>
     </div>
 );
 var appRoute = document.getElementById('app')
