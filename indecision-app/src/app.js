@@ -1,5 +1,6 @@
-import isSenior, {isAdult, canDrink} from './person'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import IndecisionApp from './components/IndecisionApp'
 
-console.log(isAdult(17))
-console.log(canDrink(19))
-console.log(isSenior(70))
+ReactDOM.render(<IndecisionApp/>, document.getElementById('app'))
+
