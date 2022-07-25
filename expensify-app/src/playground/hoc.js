@@ -9,7 +9,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 
-const Info = (props) => (
+const info = (props) => (
     <div>
         <h1>Info</h1>
         <p>The info is {props.info}</p>
@@ -25,5 +25,14 @@ const withAdminWarning = (WrappedComponnent) =>{
     )
 }
 
+const requireAuthentication = (WrappedComponnent) =>{
+    return (props) =>(
+        <div>
+            {props.isAuthenticated?<WrappedComponnent {...props}/>: <p>Please, Authenticate</p>}
+        </div>
+    )
+}
 const AdminInfo = withAdminWarning(info)
-ReactDOM.render(<AdminInfo isAdmin = {true} info = 'This is the info'/>)
+const AuthInfo = requireAuthentication(info)
+//ReactDOM.render(<AdminInfo isAdmin = {true} info = 'This is the info'/>, document.getElementById('app'))
+ReactDOM.render(<AuthInfo isAuthenticated = {false} info = 'This is the info'/>, document.getElementById('app'))
