@@ -33,3 +33,7 @@ babel src/app.js --out-file=public/scripts/app.js --presets="env,react" --watch
 -Run server with webpack
 
 yarn run dev-server
+
+- Run jest test in watch mode
+
+yarn test -- --watch
