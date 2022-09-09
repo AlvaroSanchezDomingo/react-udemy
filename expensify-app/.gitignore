@@ -2,3 +2,7 @@ node_modules
 package-lock.json
 yarn.lock
 .git
+public/bundle.js
+public/bundle.js.map
+public/styles.css
+public/styles.js.map
